@@ -28,52 +28,54 @@ class MyApp extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Image.asset(
-                'assets/images/doctorlogo.png',
-                width: 300.0,
-                height: 140.0,
-                fit: BoxFit.cover,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                "Welcome ",
-                style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(children: [
-
-                   TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "Enter Username:", labelText: "Username"),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/images/doctorlogo.png',
+                  width: 500.0,
+                  height: 340.0,
+                  fit: BoxFit.cover,
                 ),
-            
-                TextFormField(
-                 obscureText: true,
-                  decoration: InputDecoration(
-                    
-                      hintText: "Enter Password:", labelText: "Password"),
+                SizedBox(
+                  height: 20,
                 ),
-                SizedBox(height: 20,),
-                ElevatedButton(onPressed: (){
-
-                  print("Hi Codepur");
-                }, child: Text("Add1"))
-                ],),
-              )
-             
-            ],
+                Text(
+                  "Welcome To Doctor Screen",
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+          
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(children: [
+          
+                     TextFormField(
+                    decoration: InputDecoration(
+                        hintText: "Enter Username:", labelText: "Username"),
+                  ),
+              
+                  TextFormField(
+                   obscureText: true,
+                    decoration: InputDecoration(
+                      
+                        hintText: "Enter Password:", labelText: "Password"),
+                  ),
+                  SizedBox(height: 20,),
+                  ElevatedButton(onPressed: (){
+          
+                    print("Hi Codepur");
+                  }, child: Text("Login"))
+                  ],),
+                )
+               
+              ],
+            ),
           ),
         ),
       ),
